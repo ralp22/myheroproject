@@ -13,3 +13,5 @@ Audio Visualizer with theme song for each character
 
 
 API used: https://myheroacademia-api.onrender.com/#/
+
+Images credit: https://alphacoders.com/author/view/24667
