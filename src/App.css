@@ -1,0 +1,36 @@
+.App {
+  color: aliceblue;
+  text-align: center;
+  background-image: url("./Assets/mainlogo.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.nav-button{
+  justify-content: space-around;
+  transform: scale(1.5);
+  background: silver;
+  color: green;
+}
+
+.nav-buttons{
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.card{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 0.25vmin solid white;
+}
+
+
+
