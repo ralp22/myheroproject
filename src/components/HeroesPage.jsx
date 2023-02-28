@@ -13,7 +13,7 @@ useEffect(()=>{
 },[heroes, id])
 
 return heroes ? (
-<div>
+<div className="container">
 <Link to="/Heroes"><button className="nav-button">Back</button></Link>
 <h1>{heroes.hero_name} {heroes.hero_name_japanese}</h1>
 <h3 className="hero-name">Real name: {heroes.name} {heroes.name_japanese}</h3>

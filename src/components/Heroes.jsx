@@ -8,8 +8,8 @@ export default function Heroes(props){
         navigate(`${id}`)
     }
 
-    return (
-        <div className="heroes-container">
+    return props.heroes ? (
+        <div className="container">
             <Link to="/"><button className="nav-button">Back</button></Link>
              <h1>Heroes</h1> 
              <div className="grid">
@@ -22,5 +22,5 @@ export default function Heroes(props){
              }
              </div>
         </div>
-    )
+    ):  <h1>Loading</h1>
 }

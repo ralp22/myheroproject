@@ -13,10 +13,10 @@ useEffect(()=>{
 },[villains, id])
 
 return villains ? (
-<div>
+<div className="container">
 <Link to="/Villains"><button className="nav-button">Back</button></Link>
 
-<h1 className="villain-name">{villains.other_names}</h1>
+<h1 className="villain-name">{Array.from(villains.other_names).toString()}</h1>
 <h3>{villains.name} {villains.name_japanese}</h3>
 <h3 className="villain-name">{villains.quirk} {villains.quirk_japanese}</h3>
 <p className="villain-name">{villains.quirk_description}</p>

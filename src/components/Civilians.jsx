@@ -7,9 +7,9 @@ export default function Civilians(props){
         navigate(`${id}`)
     }
 
-    return (
+    return props.civilians ? (
        
-        <div className="civilians-container">
+        <div className="container">
             <Link to="/"><button className="nav-button">Back</button></Link>
              <h1>Civilians</h1> 
              <div className="grid">
@@ -22,5 +22,5 @@ export default function Civilians(props){
              }
              </div>
         </div>
-    )
+    ):  <h1>Loading</h1>
 }
