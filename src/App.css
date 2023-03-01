@@ -12,7 +12,7 @@
   justify-content: space-around;
   transform: scale(1.5);
   background: silver;
-  color: blue;
+  color: teal;
 }
 
 .nav-buttons{
@@ -27,6 +27,7 @@
 }
 
 .card{
+  display: cover;
   height: 10vmin;
   width: 10vmin;
   border-radius: 50%;
@@ -37,5 +38,12 @@
   margin-top: 3vmin;
 }
 
+.profile{
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: 2fr;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+}
 
 

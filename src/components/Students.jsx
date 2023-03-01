@@ -1,6 +1,7 @@
 import { useNavigate, Link } from 'react-router-dom'
 import images from "../Assets/heroesimages/mha"
 
+
 export default function Students(props){
 
 
@@ -8,7 +9,17 @@ export default function Students(props){
     const showStudent = (id) => {
         navigate(`${id}`)
     }
-
+    const image = (student) => {
+        const studentImage = images.find(img => img.id == student.id)
+        // console.log(studentImage)
+        // console.log(student.id)
+        // console.log(images[0].id)
+        if(studentImage){
+            return studentImage.images.s
+        } else {
+            return null
+        }
+    }
 
     return props.students ? (
         <div className="container">
@@ -17,9 +28,7 @@ export default function Students(props){
              <div className="grid">
              {
                 props.students.map((student, id)=>(
-                    //parseImg() will use .filter or .find to find where api id equals json id. Make function return image path. Use function as src
-                    // <img src={selectedImg} onClick={()=>{showStudent(id)}} className="card" key={student.id} />
-                    <img src={images[0].images.s} onClick={()=>{showStudent(id)}} className="card" key={student.id}/>
+                    <img src={image(student)} onClick={()=>{showStudent(id)}} className="card" key={student.id}/>
                 ))
              }
              </div>

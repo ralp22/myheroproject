@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-// import images from "../Assets/heroesimages/mha"
+import images from "../Assets/heroesimages/mha"
 
 export default function StudentsPage(props) {
 
@@ -15,18 +15,38 @@ useEffect(()=>{
     // setCharImg(selectedStudent.id)
 },[students, id])
 
-
+const image1 = (student) => {
+    const studentImage = images.find(img => img.id == student.id)
+    if(studentImage){
+        return studentImage.images.m
+    } else {
+        return null
+    }
+}
+const image2 = (student) => {
+    const studentImage = images.find(img => img.id == student.id)
+    if(studentImage){
+        return studentImage.images.l
+    } else {
+        return null
+    }
+}
 
 return students ? (
-<div className="container">
-<Link to="/Students"><button className="nav-button">Back</button></Link>
+    <div className="container">
+    <Link to="/Students"><button className="nav-button">Back</button></Link>
+<div className="profile">
+<img id="stdnt" src={image2(students)} style={{maxHeight: "50vmin", maxWidth: "125vmin"}}/>
+<section>
+<img src={image1(students)}/>
+</section>
 <div className="details">
 <h1 className="student-name">{students.name} {students.name_japanese}</h1>
 <h2 className="student-name">Alias: {Array.from(students.other_names).toString()}</h2>
 <h3 className="student-name">Quirk: {students.quirk} {students.quirk_japanese}</h3>
 <p className="student-name">{students.quirk_description}</p>
 <section>{students.hero_school} : {students.class}</section>
-{/* <img src={charImage}/> */}
+</div>
 </div>
 </div>
 
