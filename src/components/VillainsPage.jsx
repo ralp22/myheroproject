@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import images from "../Assets/heroesimages/mha"
 
 export default function VillainsPage(props) {
 
@@ -12,14 +13,38 @@ useEffect(()=>{
     setVillains(selectedVillain)
 },[villains, id])
 
-return villains ? (
-<div className="container">
-<Link to="/Villains"><button className="nav-button">Back</button></Link>
+const image1 = (villain) => {
+    const villainImage = images.find(img => img.id == villain.id)
+    if(villainImage){
+        return villainImage.images.m
+    } else {
+        return null
+    }
+}
+const image2 = (villain) => {
+    const villainImage = images.find(img => img.id == villain.id)
+    if(villainImage){
+        return villainImage.images.l
+    } else {
+        return null
+    }
+}
 
-<h1 className="villain-name">{Array.from(villains.other_names).toString()}</h1>
+return villains ? (
+<div className="container villains-container">
+<Link to="/Villains"><button className="nav-button">Back</button></Link>
+<div className="profile">
+<img src={image2(villains)} style={{maxHeight: "50vmin", maxWidth: "125vmin"}}/>
+<section>
+<img style={{maxHeight: '50vmin'}} src={image1(villains)}/>
+</section>
+<div className="villain-details">
+<h1>{Array.from(villains.other_names).toString()}</h1>
 <h3>{villains.name} {villains.name_japanese}</h3>
-<h3 className="villain-name">{villains.quirk} {villains.quirk_japanese}</h3>
-<p className="villain-name">{villains.quirk_description}</p>
+<h3>{villains.quirk} {villains.quirk_japanese}</h3>
+<p>{villains.quirk_description}</p>
+</div>
+</div>
 </div>
 ) : <h1>Loading . . . </h1>;
 

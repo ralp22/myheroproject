@@ -1,6 +1,6 @@
 import { useNavigate, Link } from 'react-router-dom'
-import images from "../Assets/heroesimages/mha"
-
+import images from "../../Assets/heroesimages/mha"
+import "./Students.css"
 
 export default function Students(props){
 
@@ -11,9 +11,6 @@ export default function Students(props){
     }
     const image = (student) => {
         const studentImage = images.find(img => img.id == student.id)
-        // console.log(studentImage)
-        // console.log(student.id)
-        // console.log(images[0].id)
         if(studentImage){
             return studentImage.images.s
         } else {
@@ -22,13 +19,13 @@ export default function Students(props){
     }
 
     return props.students ? (
-        <div className="container">
+        <div className="container students-container">
             <Link to="/"><button className="nav-button">Back</button></Link>
              <h1>Students</h1> 
              <div className="grid">
              {
                 props.students.map((student, id)=>(
-                    <img src={image(student)} onClick={()=>{showStudent(id)}} className="card" key={student.id}/>
+                    <img src={image(student)} onClick={()=>{showStudent(id)}} className="card students-card" key={student.id}/>
                 ))
              }
              </div>

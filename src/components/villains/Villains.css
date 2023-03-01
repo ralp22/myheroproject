@@ -1,0 +1,5 @@
+.villains-container {
+    background: linear-gradient(to right, rgb(52, 0, 66), 33%, rgb(90, 0, 90), 66%, rgb(52, 0, 66));
+    border: 5px solid rgb(45, 0, 0);
+    opacity: 0.8
+}

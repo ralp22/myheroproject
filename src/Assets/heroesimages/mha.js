@@ -68,6 +68,10 @@ import yosetsum from "./yosetsum.webp"
 import koseis from "./koseis.webp"
 import koseim from "./koseim2.webp"
 
+import stains from "./stains.webp"
+import stainm from "./stainm.webp"
+import stainl from "./stainl.webp"
+
 const images =
 
     [
@@ -228,7 +232,7 @@ const images =
             "images":{
                 "s": torus,
                 "m": torum,
-                "l":""
+                "l": torul
             }
         },  
         {
@@ -295,6 +299,14 @@ const images =
                 "l":""
             }
         },  
+        {
+            "id": 80,
+            "images":{
+                "s": stains,
+                "m": stainm,
+                "l": stainl
+            }
+        } 
     ]
 
 export default images

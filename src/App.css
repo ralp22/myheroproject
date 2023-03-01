@@ -2,6 +2,7 @@
   color: aliceblue;
   text-align: center;
   background-image: url("./Assets/mainlogo.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -32,18 +33,72 @@
   width: 10vmin;
   border-radius: 50%;
   border: 0.25vmin solid white;
+  box-shadow: 0 0 20px lightblue;
+  -moz-box-shadow: 0 0 20px lightblue;
+  -webkit-box-shadow: 0 0 20px lightblue;
+  opacity: 0.8
+}
+
+.students-card{
+  display: cover;
+  height: 10vmin;
+  width: 10vmin;
+  border-radius: 50%;
+  border: 0.25vmin solid white;
+  box-shadow: 0 0 20px lightblue;
+  -moz-box-shadow: 0 0 20px lightblue;
+  -webkit-box-shadow: 0 0 20px lightblue;
+  opacity: 0.8
+}
+
+.heroes-card{
+  display: cover;
+  height: 10vmin;
+  width: 10vmin;
+  border-radius: 50%;
+  border: 0.25vmin solid white;
+  box-shadow: 0 0 20px lightblue;
+  -moz-box-shadow: 0 0 20px lightblue;
+  -webkit-box-shadow: 0 0 20px lightblue;
+  opacity: 0.8
+}
+
+.villains-card{
+  display: cover;
+  height: 10vmin;
+  width: 10vmin;
+  border-radius: 50%;
+  border: 0.25vmin solid black;
+  box-shadow: 0 0 20px darkred;
+  -moz-box-shadow: 0 0 20px darkred;
+  -webkit-box-shadow: 0 0 20px darkred;
+  opacity: 0.8
+}
+
+.card:hover{
+  transform: scale(1.02);
+  opacity: 1;
 }
 
 .container{
   margin-top: 3vmin;
+  border: 5px solid rgba(2, 114, 75, 0.956);
+  border-radius: 10%;
+  box-shadow: 0 0 20px aliceblue;
+  -moz-box-shadow: 0 0 20px aliceblue;
+  -webkit-box-shadow: 0 0 20px aliceblue;
 }
 
 .profile{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   grid-template-rows: 2fr;
   grid-template-columns: 1fr;
   justify-content: space-around;
 }
 
+.student-details{
+  color :limegreen;
+  
+}
 

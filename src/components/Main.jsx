@@ -3,10 +3,10 @@ import {useState, useEffect} from 'react'
 import { HEROES_PATH, VILLAINS_PATH, STUDENTS_PATH, CIVILIANS_PATH } from '../globals'
 import axios from 'axios'
 import Home from "./Home"
-import Students from "./Students"
-import Heroes from "./Heroes"
-import Villains from "./Villains"
-import Civilians from "./Civilians"
+import Students from "./students/Students"
+import Heroes from "./heroes/Heroes"
+import Villains from "./villains/Villains"
+import Civilians from "./civilians/Civilians"
 import StudentsPage from "./StudentsPage"
 import HeroesPage from "./HeroesPage"
 import VillainsPage from "./VillainsPage"

@@ -5,14 +5,12 @@ import images from "../Assets/heroesimages/mha"
 export default function StudentsPage(props) {
 
 const [students, setStudents] = useState("")
-// const [charImage, setCharImg] = useState(Array.from(images))
 
 let { id } = useParams()
 
 useEffect(()=>{
     let selectedStudent = props.students[id];
     setStudents(selectedStudent)
-    // setCharImg(selectedStudent.id)
 },[students, id])
 
 const image1 = (student) => {
@@ -36,15 +34,15 @@ return students ? (
     <div className="container">
     <Link to="/Students"><button className="nav-button">Back</button></Link>
 <div className="profile">
-<img id="stdnt" src={image2(students)} style={{maxHeight: "50vmin", maxWidth: "125vmin"}}/>
+<img src={image2(students)} style={{maxHeight: "50vmin", maxWidth: "125vmin"}}/>
 <section>
-<img src={image1(students)}/>
+<img style={{maxHeight: '50vmin'}} src={image1(students)}/>
 </section>
-<div className="details">
-<h1 className="student-name">{students.name} {students.name_japanese}</h1>
-<h2 className="student-name">Alias: {Array.from(students.other_names).toString()}</h2>
-<h3 className="student-name">Quirk: {students.quirk} {students.quirk_japanese}</h3>
-<p className="student-name">{students.quirk_description}</p>
+<div className="student-details">
+<h1 className>{students.name} {students.name_japanese}</h1>
+<h2 className>Alias: {Array.from(students.other_names).toString()}</h2>
+<h3 className>Quirk: {students.quirk} {students.quirk_japanese}</h3>
+<p className>{students.quirk_description}</p>
 <section>{students.hero_school} : {students.class}</section>
 </div>
 </div>
