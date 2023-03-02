@@ -1,10 +1,9 @@
-import yousayrun from "../Assets/yousayrun.mp3"
+import ParticlesBackground from "./ParticlesBackground"
 
 export default function Home(){
-    console.log(yousayrun)
     return (
-        <div className="home">
-            <audio controls src={yousayrun} autoPlay/>
+        <div> 
+            <ParticlesBackground/>
         </div>
     )
 }

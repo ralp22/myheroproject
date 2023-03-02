@@ -29,23 +29,38 @@ const image2 = (villain) => {
         return null
     }
 }
+const song = (villain) => {
+    const villainImage = images.find(img => img.id == villain.id)
+    if(villainImage){
+        return villainImage.song
+    } else {
+        return null
+    }
+}
 
 return villains ? (
-<div className="container villains-container" style={{backgroundSize: "100%", backgroundRepeat: "no-repeat", background: `url(${image2(villains)})`}}>
-<Link to="/Villains"><button className="nav-button">Back</button></Link>
-<div className="profile">
-{/* <img src={image2(villains)} style={{maxHeight: "50vmin", maxWidth: "125vmin"}}/> */}
-<section>
-<img style={{maxHeight: '50vmin'}} src={image1(villains)}/>
-</section>
-<div className="details">
-<h1>{Array.from(villains.other_names).toString()}</h1>
-<h3>{villains.name} {villains.name_japanese}</h3>
-<h3>{villains.quirk} {villains.quirk_japanese}</h3>
-<p>{villains.quirk_description}</p>
-</div>
-</div>
-</div>
+    <div>
+        <Link to="/Villains"><button style={{marginTop: '2vmin'}} className="nav-button">Back</button></Link>
+        <div className="container villains-container" style={{maxWidth: '100vw', maxHeight: '75vh', backgroundImage: `url(${image2(villains)})`, backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
+    <div className="profile">
+    <img style={{maxHeight: '45vmin', marginTop: "20vmin", marginLeft: '20vmin'}} src={image1(villains)}/>
+    <div className="details" style={{marginTop: "20vmin", marginLeft: '60vmin', maxHeight: "40vmin"}}>
+        <h1><span style={{color: "white", textShadow: "4px 4px 4px rgb(54, 0, 88)"}}>{Array.from(villains.other_names).toString()}</span></h1>
+        <h3><span style={{color: "white", textShadow: "0 0 10px black"}}>Real name: </span>{villains.name} {villains.name_japanese}</h3>
+        <h3><span style={{color: "white", textShadow: "0 0 10px black"}}>Quirk: </span>{villains.quirk} {villains.quirk_japanese}</h3>
+        <p style={{fontWeight: "bold", fontFamily: "Sans", textShadow: "0 0 10px red", fontSize: "2vmin", padding: "1.8vmin", marginTop: "1.8vmin", maxWidth: "40vmin"}}>{villains.quirk_description}</p>
+    </div>
+    
+    </div>
+    <figure style={{marginTop: '-15vmin'}}>
+        <figcaption style={{margin: "0 auto", fontFamily: 'Impact', fontSize: "2.5vmin", color: 'darkred', textShadow: '0 0 10px black'}}>
+            {Array.from(villains.other_names).toString()}'s Theme Song
+        </figcaption>
+        <audio controls src={song(villains)}/>
+    </figure>
+    </div>
+    </div>
+
 ) : <h1>Loading . . . </h1>;
 
 }
