@@ -1,7 +1,7 @@
 .App {
   color: aliceblue;
   text-align: center;
-  background-image: url("./Assets/mainlogo.jpg");
+  background: url("./Assets/mainlogo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -10,10 +10,15 @@
 }
 
 .nav-button{
+  font-family: Impact;
+  letter-spacing: .01cm;
   justify-content: space-around;
   transform: scale(1.5);
-  background: silver;
-  color: teal;
+  background: transparent;
+  color: aliceblue;
+  font-size: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 6px green;
 }
 
 .nav-buttons{
@@ -33,9 +38,9 @@
   width: 10vmin;
   border-radius: 50%;
   border: 0.25vmin solid white;
-  box-shadow: 0 0 20px lightblue;
-  -moz-box-shadow: 0 0 20px lightblue;
-  -webkit-box-shadow: 0 0 20px lightblue;
+  box-shadow: 0 0 15px lightblue;
+  -moz-box-shadow: 0 0 15px lightblue;
+  -webkit-box-shadow: 0 0 15px lightblue;
   opacity: 0.8
 }
 
@@ -45,9 +50,9 @@
   width: 10vmin;
   border-radius: 50%;
   border: 0.25vmin solid white;
-  box-shadow: 0 0 20px lightblue;
-  -moz-box-shadow: 0 0 20px lightblue;
-  -webkit-box-shadow: 0 0 20px lightblue;
+  box-shadow: 0 0 15px lightblue;
+  -moz-box-shadow: 0 0 15px lightblue;
+  -webkit-box-shadow: 0 0 15px lightblue;
   opacity: 0.8
 }
 
@@ -89,16 +94,21 @@
   -webkit-box-shadow: 0 0 20px aliceblue;
 }
 
+.details{
+  margin-left: 1vmin;
+  max-height: fit-content;
+  max-width: fit-content;
+  border: 2px solid black;
+  border-radius: 12%;
+  box-shadow: 0 0 10px black;
+  -moz-box-shadow: 0 0 10px black;
+  -webkit-box-shadow: 0 0 10px black;
+  background: linear-gradient(to bottom, rgba(185, 184, 184, 0.75), 10%, rgba(156, 156, 156, 0.75));
+  color: black;
+}
+
 .profile{
+  margin-top: 40vh;
   display: flex;
   flex-direction: row;
-  grid-template-rows: 2fr;
-  grid-template-columns: 1fr;
-  justify-content: space-around;
 }
-
-.student-details{
-  color :limegreen;
-  
-}
-

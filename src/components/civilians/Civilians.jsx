@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import "./Civilians.css"
 import images from "../../Assets/heroesimages/mha"
+import plusultra from "../../Assets/plusultra.png"
 
 export default function Civilians(props){
     console.log(props.civilians)
@@ -20,10 +21,10 @@ export default function Civilians(props){
 
     return props.civilians ? (
        
-        <div className="container civilians-container">
+        <div className="container civilians-container" style={{opacity: 0.8}}>
             <Link to="/"><button className="nav-button">Back</button></Link>
-             <h1>Civilians</h1> 
-             <div className="grid">
+             <h1><img src={plusultra} style={{maxHeight: "15vmin"}}/></h1> 
+             <div style={{marginBottom: "20vmin"}} className="grid">
              {
                 props.civilians.map((civilian, id)=>(
                     <img src={image(civilian)} onClick={()=>{showCivilian(id)}}className="card" key={id}/>

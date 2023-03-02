@@ -31,14 +31,14 @@ const image2 = (villain) => {
 }
 
 return villains ? (
-<div className="container villains-container">
+<div className="container villains-container" style={{backgroundSize: "100%", backgroundRepeat: "no-repeat", background: `url(${image2(villains)})`}}>
 <Link to="/Villains"><button className="nav-button">Back</button></Link>
 <div className="profile">
-<img src={image2(villains)} style={{maxHeight: "50vmin", maxWidth: "125vmin"}}/>
+{/* <img src={image2(villains)} style={{maxHeight: "50vmin", maxWidth: "125vmin"}}/> */}
 <section>
 <img style={{maxHeight: '50vmin'}} src={image1(villains)}/>
 </section>
-<div className="villain-details">
+<div className="details">
 <h1>{Array.from(villains.other_names).toString()}</h1>
 <h3>{villains.name} {villains.name_japanese}</h3>
 <h3>{villains.quirk} {villains.quirk_japanese}</h3>

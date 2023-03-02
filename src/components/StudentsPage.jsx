@@ -31,23 +31,21 @@ const image2 = (student) => {
 }
 
 return students ? (
-    <div className="container">
+    <div>
+    <div className="container" style={{backgroundSize: "100%", backgroundRepeat: "no-repeat", background: `url(${image2(students)})`}}>
     <Link to="/Students"><button className="nav-button">Back</button></Link>
 <div className="profile">
-<img src={image2(students)} style={{maxHeight: "50vmin", maxWidth: "125vmin"}}/>
-<section>
-<img style={{maxHeight: '50vmin'}} src={image1(students)}/>
-</section>
-<div className="student-details">
-<h1 className>{students.name} {students.name_japanese}</h1>
-<h2 className>Alias: {Array.from(students.other_names).toString()}</h2>
-<h3 className>Quirk: {students.quirk} {students.quirk_japanese}</h3>
-<p className>{students.quirk_description}</p>
-<section>{students.hero_school} : {students.class}</section>
+<div className="details" style={{marginTop: "10vmin"}}>
+<h1><span style={{color: "white", textShadow: "0 0 10px black"}}>{students.name} {students.name_japanese}</span></h1>
+<h2><span style={{color: "white", textShadow: "0 0 10px black"}}>Alias/Hero Name:</span> {Array.from(students.other_names).toString()}</h2>
+<h3><span style={{color: "white", textShadow: "0 0 10px black"}}>Quirk:</span> {students.quirk} {students.quirk_japanese}</h3>
+<section style={{fontWeight: "bold"}}><span style={{color: "white", textShadow: "0 0 10px black"}}>{students.hero_school}:</span> {students.class}</section>
+<p style={{fontWeight: "bold", textShadow: "0 0 10px aliceblue", fontFamily: "Verdana", fontSize: "1.8vmin", padding: "1.8vmin", marginTop: "1.8vmin", maxWidth: "40vmin", margin: "0 auto"}}>{students.quirk_description}</p>
+</div>
+<img style={{maxHeight: '50vmin', justifyItems: 'right'}} src={image1(students)}/>
 </div>
 </div>
 </div>
-
 ) : <h1>Loading . . . </h1>;
 
 }

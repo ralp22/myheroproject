@@ -1,6 +1,7 @@
 import { useNavigate, Link } from 'react-router-dom'
 import images from "../../Assets/heroesimages/mha"
 import "./Students.css"
+import herologo from "../../Assets/herologo.webp"
 
 export default function Students(props){
 
@@ -21,7 +22,7 @@ export default function Students(props){
     return props.students ? (
         <div className="container students-container">
             <Link to="/"><button className="nav-button">Back</button></Link>
-             <h1>Students</h1> 
+             <h1><img src={herologo} style={{maxHeight: "17.5vmin"}}/></h1> 
              <div className="grid">
              {
                 props.students.map((student, id)=>(
