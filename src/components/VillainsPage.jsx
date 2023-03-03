@@ -53,7 +53,7 @@ return villains ? (
     
     </div>
     <figure style={{marginTop: '-15vmin'}}>
-        <figcaption style={{margin: "0 auto", fontFamily: 'Impact', fontSize: "2.5vmin", color: 'darkgray', textShadow: '0 0 12px red'}}>
+        <figcaption style={{margin: "0 auto", fontFamily: 'Impact', fontSize: "2.5vmin", color: 'white', textShadow: '0 0 12px red'}}>
             Theme Song
         </figcaption>
         <audio controls src={song(villains)}/>
