@@ -26,7 +26,7 @@ export default function Villains(props){
              <div className="grid">
              {
                 props.villains.map((villain, id)=>(
-                    <img src={image(villain)} onClick={()=>{showVillain(id)}}className="card villains-card" key={villain.id}/>
+                    <img src={image(villain)} style={{imageResolution: "100vmin"}} onClick={()=>{showVillain(id)}} className="card villains-card" key={id}/>
                     
                 ))
              }

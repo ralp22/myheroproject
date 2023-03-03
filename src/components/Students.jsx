@@ -25,7 +25,7 @@ export default function Students(props){
              <div className="grid">
              {
                 props.students.map((student, id)=>(
-                    <img src={image(student)} onClick={()=>{showStudent(id)}} className="card students-card" key={student.id}/>
+                    <img src={image(student)} onClick={()=>{showStudent(id)}} className="card students-card" key={id}/>
                 ))
              }
              </div>

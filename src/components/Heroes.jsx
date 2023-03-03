@@ -24,7 +24,7 @@ export default function Heroes(props){
              <div className="grid">
              {
                 props.heroes.map((hero, id)=>(
-                    <img src={image(hero)} onClick={()=>{showHero(id)}}className="card" key={hero.id}/>  
+                    <img src={image(hero)} onClick={()=>{showHero(id)}}className="card" key={id}/>  
                 ))
              }
              </div>

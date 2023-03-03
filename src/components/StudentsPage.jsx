@@ -56,7 +56,7 @@ return students ? (
 </div>
 <figure>
     <figcaption style={{margin: '0 auto', fontFamily: 'Impact', fontSize: "2.5vmin", color: 'white', textShadow: '0 0 10px green'}}>
-        {students.name}'s Theme Song
+        Theme Song
     </figcaption>
     <audio controls src={song(students)}/>
 </figure> 

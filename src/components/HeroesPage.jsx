@@ -49,12 +49,12 @@ return heroes ? (
 <h3><span style={{color: "white", textShadow: "0 0 10px black"}}>Quirk: </span><span style={{textShadow: "0 0 10px aliceblue"}}>{heroes.quirk} {heroes.quirk_japanese}</span></h3>
 <p style={{fontWeight: "bold", fontFamily: "Sans", textShadow: "0 0 10px aliceblue", fontSize: "2vmin", padding: "1.8vmin", marginTop: "1.8vmin", maxWidth: "40vmin"}}>{heroes.quirk_description}</p>
 </div>
-<img style={{marginTop: "20vmin", marginLeft: '30vw'}} src={image1(heroes)}/>
+<img style={{maxHeight: '55vmin', marginTop: "20vmin", marginLeft: '30vw'}} src={image1(heroes)}/>
 </div>
 </div>
 <figure>
 <figcaption style={{fontFamily: 'Impact', fontSize: "2.5vmin", color: 'white', textShadow: '0 0 10px red'}}>
-        {heroes.hero_name}'s Theme Song
+        Theme Song
     </figcaption>
     <audio controls src={song(heroes)}/>
 </figure> 

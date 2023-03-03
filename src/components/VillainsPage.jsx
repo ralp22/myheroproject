@@ -6,7 +6,7 @@ export default function VillainsPage(props) {
 
 const [villains, setVillains] = useState("")
 
-let { id } = useParams()
+let { id } = useParams() 
 
 useEffect(()=>{
     let selectedVillain = props.villains[id];
@@ -41,7 +41,7 @@ const song = (villain) => {
 return villains ? (
     <div>
         <Link to="/Villains"><button style={{marginTop: '2vmin'}} className="nav-button">Back</button></Link>
-        <div className="container villains-container" style={{maxWidth: '100vw', maxHeight: '75vh', backgroundImage: `url(${image2(villains)})`, backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
+        <div className="container villains-container" style={{backgroundImage: `url(${image2(villains)})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", maxWidth: '100vw', maxHeight: '75vh'}}>
     <div className="profile">
     <img style={{maxHeight: '45vmin', marginTop: "20vmin", marginLeft: '20vmin'}} src={image1(villains)}/>
     <div className="details" style={{marginTop: "20vmin", marginLeft: '60vmin', maxHeight: "40vmin"}}>
@@ -53,8 +53,8 @@ return villains ? (
     
     </div>
     <figure style={{marginTop: '-15vmin'}}>
-        <figcaption style={{margin: "0 auto", fontFamily: 'Impact', fontSize: "2.5vmin", color: 'darkred', textShadow: '0 0 10px black'}}>
-            {Array.from(villains.other_names).toString()}'s Theme Song
+        <figcaption style={{margin: "0 auto", fontFamily: 'Impact', fontSize: "2.5vmin", color: 'darkgray', textShadow: '0 0 12px red'}}>
+            Theme Song
         </figcaption>
         <audio controls src={song(villains)}/>
     </figure>
