@@ -20,13 +20,13 @@ export default function Civilians(props){
 
     return props.civilians ? (
        
-        <div className="container civilians-container" style={{opacity: 0.8}}>
+        <div className="container civilians-container">
             <Link to="/"><button className="nav-button">Back</button></Link>
              <h1><img src={plusultra} style={{maxHeight: "15vmin"}}/></h1> 
              <div style={{marginBottom: "20vmin"}} className="grid">
              {
                 props.civilians.map((civilian, id)=>(
-                    <img src={image(civilian)} onClick={()=>{showCivilian(id)}}className="card" key={id}/>
+                    <img src={image(civilian)} onClick={()=>{showCivilian(id)}}className="card civilians-card" key={id}/>
                 ))
              }
              </div>

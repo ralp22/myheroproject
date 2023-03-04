@@ -44,18 +44,18 @@ return students ? (
         <Link to="/Students"><button style={{marginTop: '2vmin'}} className="nav-button">Back</button></Link>
     <div className="container students-container" style={{maxWidth: "100vw", maxHeight: "75vh", background: `url(${image2(students)})`, backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
 <div className="profile">
-<div className="details" style={{maxHeight: "45vmin", minWidth: "fit-content", marginTop: "20vmin", marginLeft: "10vmin"}}>
+<div className="details" style={{height: 'fit-content', marginTop: "20vmin", marginLeft: "10vmin"}}>
 <h1><span style={{color: "white", textShadow: "4px 4px 4px green"}}>{students.name} {students.name_japanese}</span></h1>
 <h2><span style={{color: "white", textShadow: "0 0 10px black"}}>Alias/Hero Name:</span> <span style={{textShadow: "0 0 10px aliceblue"}}>{Array.from(students.other_names).toString()}</span></h2>
-<h3><span style={{color: "white", textShadow: "0 0 10px black"}}>Quirk:</span> <span style={{textShadow: "0 0 10px aliceblue"}}>{students.quirk} {students.quirk_japanese}</span></h3>
 <section style={{fontWeight: "bold"}}><span style={{color: "white", textShadow: "0 0 10px black"}}>{students.hero_school}:</span> <span style={{textShadow: "0 0 10px aliceblue"}}>{students.class}</span></section>
+<h3><span style={{color: "white", textShadow: "0 0 10px black"}}>Quirk:</span> <span style={{textShadow: "0 0 10px aliceblue"}}>{students.quirk} {students.quirk_japanese}</span></h3>
 <p style={{fontWeight: "bold", fontFamily: "Sans", textShadow: "0 0 10px aliceblue", fontSize: "2.25vmin", padding: "1.8vmin", marginTop: "1.8vmin", maxWidth: "40vmin"}}>{students.quirk_description}</p>
 </div>
 <img style={{maxHeight: "50vh", marginTop: "20vmin", marginLeft: '30vw'}} src={image1(students)}/>
 </div>
 </div>
 <figure>
-    <figcaption style={{margin: '0 auto', fontFamily: 'Impact', fontSize: "2.5vmin", color: 'white', textShadow: '0 0 10px green'}}>
+    <figcaption style={{fontFamily: 'Impact', fontSize: "2.5vmin", color: 'white', textShadow: '0 0 10px green'}}>
         Theme Song
     </figcaption>
     <audio controls src={song(students)}/>

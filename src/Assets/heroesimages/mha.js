@@ -1895,7 +1895,7 @@ const images =
                 "m": mhalogo,
                 "l": hiroshil
             },
-            "song": yourhero
+            "song": shotosong
         },
         {
             "id": 156,

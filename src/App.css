@@ -74,9 +74,36 @@
   opacity: 0.8
 }
 
-.card:hover{
+.civilians-card:hover{
   transform: scale(1.02);
   opacity: 1;
+  box-shadow: 0 0 30px gold;
+  -moz-box-shadow: 0 0 30px gold;
+  -webkit-box-shadow: 0 0 30px gold;
+}
+
+.students-card:hover{
+  transform: scale(1.02);
+  opacity: 1;
+  box-shadow: 0 0 30px aliceblue;
+  -moz-box-shadow: 0 0 30px aliceblue;
+  -webkit-box-shadow: 0 0 30px aliceblue;
+}
+
+.heroes-card:hover{
+  transform: scale(1.02);
+  opacity: 1;
+  box-shadow: 0 0 30px royalblue;
+  -moz-box-shadow: 0 0 30px royalblue;
+  -webkit-box-shadow: 0 0 30px royalblue;
+}
+
+.villains-card:hover{
+  transform: scale(1.02);
+  opacity: 1;
+  box-shadow: 0 0 30px darkred;
+  -moz-box-shadow: 0 0 30px darkred;
+  -webkit-box-shadow: 0 0 30px darkred;
 }
 
 .container{
@@ -131,6 +158,6 @@
 }
 
 .civilians-container{
-  background: linear-gradient(to right, rgb(174, 156, 15), 33%, yellow, 66%, rgb(174, 156, 15));
+  background: linear-gradient(to right, rgb(174, 156, 15), 33%, gold, 66%, rgb(174, 156, 15));
   background-size: 100vmax;
 }
