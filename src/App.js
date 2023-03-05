@@ -72,7 +72,7 @@ const particlesLoaded = useCallback(async container => {
                         enable: false,
                     },
                     move: {
-                        direction: "none",
+                        direction: "top",
                         enable: true,
                         // outModes: {
                         //     default: "bounce",
